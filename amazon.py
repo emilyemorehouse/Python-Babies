@@ -27,9 +27,14 @@ def amazon():
         item = item.replace("by ", "")
         author.append(item)
 
-    for i in range(0,20):
-        print (rank[i], title[i])
-        print ("By: ", author[i])
+    # for i in range(0,20):
+    #     print (rank[i], title[i])
+    #     print ("By: ", author[i])
+
+    for rank, title, author in zip(rank, title, author):
+        print (rank, title)
+        print (author)
+
 
 if __name__ == '__main__':
     amazon()
